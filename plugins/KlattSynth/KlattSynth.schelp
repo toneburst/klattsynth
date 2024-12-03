@@ -1,0 +1,26 @@
+class:: KlattSynth
+summary:: A vocal formant synthesiser
+related:: TODO
+categories:: UGens>TODO
+
+description::
+
+A vocal formant synthesiser
+
+
+classmethods::
+
+method::ar, kr
+
+argument::TODO
+
+argument::TODO
+
+
+examples::
+
+code::
+
+{ KlattSynth.ar(/* TODO */) }.play
+
+::
