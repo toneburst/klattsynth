@@ -1,12 +1,32 @@
 // PluginKlattSynth.cpp
 // toneburst (the_voder@yahoo.co.uk)
 
+#define _USE_MATH_DEFINES
+
 #include "SC_PlugIn.hpp"
 #include "KlattSynth.hpp"
 
 static InterfaceTable* ft;
 
+const double PITWO=M_PI*2;
+
 namespace klattsynth {
+
+class FrequencyGenerator {
+	private:
+	int sampleRate;
+	double lastCyclePos;
+
+	public:
+	FrequencyGenerator(int sr): sampleRate(sr), lastCyclePos(0) {}
+
+	double getNext(double frequency) {
+		double cyclePos=fmod((frequency/sampleRate)+lastCyclePos,1);
+		lastCyclePos=cyclePos;
+		return cyclePos;
+	}
+
+};
 
 KlattSynth::KlattSynth() {
     mCalcFunc = make_calc_function<KlattSynth, &KlattSynth::next>();
