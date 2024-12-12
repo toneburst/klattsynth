@@ -29,8 +29,6 @@ private:
 
     // Methods
 
-    double FrequencyGenerator(sr);
-
     void next(int nSamples);
 
 };

@@ -58,11 +58,7 @@ class FrequencyGenerator {
 KlattSynth::KlattSynth() {
     
     //Print("sample-rate: %f, buffer size: %d, twopi: %f\n", sRate, bufferSize(), PITWO);
-
-    // Instantiate Freq Generator /phasor
-    FrequencyGenerator pitchGen(sRate);
     
-
     // Set the calculation method for ugen
     mCalcFunc = make_calc_function<KlattSynth, &KlattSynth::next>();
 
@@ -84,7 +80,7 @@ void KlattSynth::next(int nSamples) {
 
     // Fill buffer
     for (int i = 0; i < nSamples; ++i) {
-        outbuf[i] = pitchGen.getNext(pitch);
+        outbuf[i] = gain;//pitchGen.getNext(pitch);
     }
 }
 
