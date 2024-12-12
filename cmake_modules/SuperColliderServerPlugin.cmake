@@ -6,7 +6,7 @@ include(SuperColliderCompilerConfig)
 
 function(sc_check_sc_path path)
     if(NOT path)
-        set(sc_path_default "../supercollider")
+        set(sc_path_default "../../supercollider")
         message(WARNING "No SC_PATH specified, defaulting to '${sc_path_default}'.")
         set(path "${sc_path_default}")
     endif()

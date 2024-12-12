@@ -1,7 +1,7 @@
 class:: KlattSynth
 summary:: A vocal formant synthesiser
 related:: TODO
-categories:: UGens>TODO
+categories:: UGens>toneburst
 
 description::
 
@@ -10,11 +10,11 @@ A vocal formant synthesiser
 
 classmethods::
 
-method::ar, kr
+method::ar
 
-argument::TODO
+argument::pitch
 
-argument::TODO
+argument::gain
 
 
 examples::

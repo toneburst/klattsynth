@@ -1,7 +1,7 @@
 KlattSynth : UGen {
-	*ar { |input, gain|
+	*ar { |pitch=440, gain=1.0|
 		/* TODO */
-		^this.multiNew('audio', input, gain);
+		^this.multiNew('audio', pitch, gain);
 	}
 	checkInputs {
 		/* TODO */

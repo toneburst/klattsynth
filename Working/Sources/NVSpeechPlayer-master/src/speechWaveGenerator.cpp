@@ -56,7 +56,6 @@ class FrequencyGenerator {
 		lastCyclePos=cyclePos;
 		return cyclePos;
 	}
-
 };
 
 class VoiceGenerator {
