@@ -4,33 +4,36 @@
 #pragma once
 
 #include "SC_PlugIn.hpp"
+#include "NVSPClasses.hpp"
 
 namespace klattsynth {
 
-class KlattSynth : public SCUnit {
-public:
-    /////////////////
-    // Constructor //
-    /////////////////
+    class KlattSynth : public SCUnit {
+        public:
+            /////////////////
+            // Constructor //
+            /////////////////
 
-    KlattSynth();
+            KlattSynth();
 
-    ////////////////
-    // Destructor //
-    ////////////////
+            ////////////////
+            // Destructor //
+            ////////////////
 
-    // ~KlattSynth();
+            // ~KlattSynth();
 
-private:
+        private:
 
-    // Member variables
+            // Member variables
 
-    const double sRate = sampleRate();
+            const double sRate = sampleRate();
 
-    // Methods
+            nvspeechplayer::SpeechWaveGenerator speechWaveGen();
 
-    void next(int nSamples);
+            // Methods
 
-};
+            void next(int nSamples);
+
+    };
 
 } // Namespace klattsynth

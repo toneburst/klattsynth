@@ -1,0 +1,6 @@
+Symlink from install dir to SuperCollider extensions:
+mkdir ~/Library/Application\ Support/SuperCollider/Extensions/sc3-plugins/SC3plugins/toneburst 
+ln -sF ~/Documents/Coding/SuperCollider/Plugins/klattsynth/build/install/KlattSynth/KlattSynth ~/Library/Application\ Support/SuperCollider/Extensions/sc3-plugins/SC3plugins/toneburst 
+
+Build plugins (from project root):
+cmake --build build --config "Release" --target install
